@@ -17,5 +17,11 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         return new ViewModel();
+        $postHot = $this->getPostByCategoryDefault($getAllCate->id, $this->language, 'post_general', ($device == 'phone')?18 : 20, 'new_promotion');
+        $model->setVariable("postHot", $postHot);
+        $page = (int) $this->params()->fromQuery('page',1);
+        $data = $this->getAllPostByCategory($getAllCate->id, $this->language, 'post_general', 60, '', $page);
+        $model->setVariable("paginator", $data['paginator']);
+        $model->setVariable("data", $data);
     }
 }
