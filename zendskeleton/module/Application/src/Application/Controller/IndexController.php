@@ -19,6 +19,7 @@ class IndexController extends AbstractActionController
 		
 		echo "fdasjhfdjaushfuk";
         return new ViewModel();
+		echo "fhsdgfyads";
         $postHot = $this->getPostByCategoryDefault($getAllCate->id, $this->language, 'post_general', ($device == 'phone')?18 : 20, 'new_promotion');
         $model->setVariable("postHot", $postHot);
         $page = (int) $this->params()->fromQuery('page',1);
