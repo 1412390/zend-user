@@ -19,10 +19,6 @@ class IndexController extends AbstractActionController
 		
 		echo "fdasjhfdjaushfuk";
         return new ViewModel();
-<<<<<<< HEAD
-				echo "fdasjhfdjaushfuk";
-	}
-=======
         $postHot = $this->getPostByCategoryDefault($getAllCate->id, $this->language, 'post_general', ($device == 'phone')?18 : 20, 'new_promotion');
         $model->setVariable("postHot", $postHot);
         $page = (int) $this->params()->fromQuery('page',1);
@@ -30,5 +26,4 @@ class IndexController extends AbstractActionController
         $model->setVariable("paginator", $data['paginator']);
         $model->setVariable("data", $data);
     }
->>>>>>> 9c03305feda5ae1c9c2ec3d96bda0460fceb1f70
 }
