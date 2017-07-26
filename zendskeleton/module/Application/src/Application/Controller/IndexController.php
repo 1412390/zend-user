@@ -34,6 +34,7 @@ class IndexController extends AbstractActionController
         $model->setVariable("data", $data);
         $model->setVariable("postHot", $postHot);
         $page = (int) $this->params()->fromQuery('page',1);
+		df  d
         $data = $this->getAllPostByCategory($getAllCate->id, $this->language, 'post_general', 60, '', $page);
         $model->setVariable("paginator", $data['paginator']);
         $model->setVariable("data", $data);
