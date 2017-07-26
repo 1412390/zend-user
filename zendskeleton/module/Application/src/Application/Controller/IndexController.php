@@ -20,6 +20,7 @@ class IndexController extends AbstractActionController
 		echo "fdasjhfdjaushfuk";
         return new ViewModel();
 		echo "fhsdgfyads";
+		sdmnzsdf
         $model->setVariable("postHot", $postHot);
         $page = (int) $this->params()->fromQuery('page',1);
         $data = $this->getAllPostByCategory($getAllCate->id, $this->language, 'post_general', 60, '', $page);
